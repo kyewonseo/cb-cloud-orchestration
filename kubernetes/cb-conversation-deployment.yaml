@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cb-conversation
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        role: cb-conversation
+        name: cb-conversation
+    spec:
+      containers:
+      - image: 539277938309.dkr.ecr.us-west-2.amazonaws.com/cb-conversation:latest
+        imagePullPolicy: Always
+        name: cb-conversation
+        env:
+        - name  : FB_PAGE_ACCESS_TOKEN
+          value : "FB_PAGE_ACCESS_TOKEN"
+        - name  : FB_VERIFY_TOKEN
+          value : "FB_VERIFY_TOKEN"
+        ports:
+        - containerPort: 3000
