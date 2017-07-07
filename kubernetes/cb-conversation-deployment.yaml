@@ -15,9 +15,13 @@ spec:
         imagePullPolicy: Always
         name: cb-conversation
         env:
-        - name  : FB_PAGE_ACCESS_TOKEN
-          value : "FB_PAGE_ACCESS_TOKEN"
-        - name  : FB_VERIFY_TOKEN
-          value : "FB_VERIFY_TOKEN"
+        - name  : appSecret
+          value : "ec1c61500733d6998fde22261f73c181"
+        - name  : pageAccessToken
+          value : "EAAEnsPAELUMBADgSLdVm8jxd9krQqtjxrfn0VpY8Upa0KqBLLAq3CRTQjYUa4DZCTKDbu9ZCGMQj3TDWw2vUKQ9AxSZAlLIXwlYzWtoTSbAGawA4hka9eWsqhomosleZBTWeiJ8Si6B8fO667pSYGpROfRLcgVev5TlwnHtFUql1NGc1DXX1zoHFeaJUZC14ZD"
+        - name  : validationToken
+          value : "hellochatbrick"
+        - name  : serverURL
+          value : "https://chatbrick.herokuapp.com"
         ports:
         - containerPort: 3000
